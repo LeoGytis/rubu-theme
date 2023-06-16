@@ -1,3 +1,13 @@
+{% for block in section.blocks %}
+
+  <div style="background-color: {{ block.settings.bg_color }}; color: {{block.settings.text_color}}">
+    {{ block.settings.text }}
+    {{ block.settings.bg_color }}
+    {{ block.settings.text_color }}
+  </div>
+
+{% endfor %}
+
 {% schema %}
   {
     "name": "Discount Bar",
@@ -21,7 +31,6 @@
             "id": "text_color",
             "label": "Text color text"
           }
-
         ]
       }
     ]

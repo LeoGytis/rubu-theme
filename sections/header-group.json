@@ -35,10 +35,15 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "discount-bar": {
+      "type": "discount-bar"
+     
     }
   },
   "order": [
     "announcement-bar",
+    "discount-bar",
     "header"
   ]
 }
