@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.geras {
-    background-color: yellowgreen;
+.gender-button {
+    color:  #8F8F8F;
+    border: none;
+    border-radius: 6px;
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
 }
 
-.blogas {
-    background-color: rgb(205, 50, 109);
-}

@@ -1,22 +1,26 @@
 {% for block in section.blocks %}
   <div class="p-3 flex justify-between">
-    <div>Moterims Vyrams Vaikams</div>
+    <div class="flex items-center pl-3">
+      <button class="gender-button p-2">Moterims</button>
+      <button class="gender-button p-2">Vyrams</button>
+      <button class="gender-button p-2">Vaikams</button>
+    </div>
 
     <div class="flex items-center">
       <img src="{{ section.settings.logo_image | img_url: '100x'}}" alt="">
     </div>
 
-    <div class="navigation-logos inline-flex items-center justify-center h-32">
-      <div class="user-icon flex h-10">
+    <div class="navigation-logos inline-flex items-center justify-center h-32 pr-3">
+      <div class="user-icon flex cursor-pointer p-1 h-10">
         {% render 'icon-user' %}
       </div>
-      <div class="heart-icon flex h-10">
+      <div class="heart-icon flex cursor-pointer p-1 h-10">
         {% render 'icon-heart' %}
       </div>
-      <div class="cart-icon flex h-10">
+      <div class="cart-icon flex cursor-pointer p-1 h-10">
         {% render 'icon-cart-new' %}
       </div>
-      <div class="globe-icon flex h-8">
+      <div class="globe-icon flex cursor-pointer p-1 h-8">
         {% render 'icon-globe' %}
       </div>
     </div>
