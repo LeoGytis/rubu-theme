@@ -40,6 +40,10 @@
       "type": "discount-bar"
      
     },
+    "collections-bar": {
+      "type": "collections-bar"
+     
+    },
     "header-new": {
       "type": "header-new"
      
@@ -49,6 +53,7 @@
     "announcement-bar",
     "discount-bar",
     "header",
-    "header-new"
+    "header-new",
+    "collections-bar"
   ]
 }
