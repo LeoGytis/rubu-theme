@@ -39,11 +39,16 @@
     "discount-bar": {
       "type": "discount-bar"
      
+    },
+    "header-new": {
+      "type": "header-new"
+     
     }
   },
   "order": [
     "announcement-bar",
     "discount-bar",
-    "header"
+    "header",
+    "header-new"
   ]
 }

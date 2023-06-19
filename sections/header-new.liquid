@@ -1,0 +1,59 @@
+{% for block in section.blocks %}
+  <div class="p-3 justify-between">
+    <div>
+      <img src="{{ section.settings.logo_image | img_url: '100x'}}" alt="">
+    </div>
+
+    <div class="navigation-logos flex-row h-32 border-red-800">
+      <div class="user-icon flex h-10">
+        {% render 'icon-user' %}
+      </div>
+      <div class="heart-icon flex h-10">
+        {% render 'icon-heart' %}
+      </div>
+      <div class="cart-icon flex h-10">
+        {% render 'icon-cart-new' %}
+      </div>
+      <div class="globe-icon flex h-10">
+        {% render 'icon-globe' %}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+{% schema %}
+{
+  "name": "New Header",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "discount",
+      "name": "Discount",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Discount text"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
