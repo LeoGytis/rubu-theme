@@ -1,0 +1,46 @@
+<div class="header-image">
+  <div class="header-image-first">
+    <img src="{{ section.settings.logo_image | img_url: '100x'}}" alt="">
+    PIRMA NUOTRAUKA
+  </div>
+
+  <div class="discount-badge">%NUOLAIDA%</div>
+
+  <h1 class="header-text">T-shirts sale</h1>
+  <h4 class="header-text-small">
+    Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous.
+  </h4>
+  <button class="btn-shop">SHOP</button>
+  <div class="discount-badge">%NUOLAIDA%</div>
+  <div class="header-image-second">ANTRA NUOTRAUKA</div>
+</div>
+
+{% schema %}
+{
+  "name": "Header banner",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo_image_first",
+      "label": "Logo image first"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image_second",
+      "label": "Logo image second"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "header-banner",
+      "name": "Header banner"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header new"
+    }
+  ]
+}
+{% endschema %}
