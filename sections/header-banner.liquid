@@ -27,19 +27,22 @@
     <img src="{{ section.settings.image_1 | img_url: '400x'}}" alt="">
   </div>
 
-  <div class="flex justify-center items-center w-32 h-24 rounded-full bg-lime-200 font-black">-20%</div>
+  <div class="relative flex-container content-align-{{ section.settings.content_align }}">
+    <div class="z-[100] absolute bottom-20 left-4 flex justify-center items-center w-32 h-32 rounded-full bg-lime-200 font-black">
+      -20%
+    </div>
 
-  <div class="flex-container content-align-{{ section.settings.content_align }}">
-    <div>
+    <div class="z-[101] absolute top-24 right-0 flex justify-center items-center w-32 h-32 rounded-full bg-purple-300 font-black">
+      -60%
+    </div>
+    <div class="pb-26">
       <div class="text-6xl font-black content-align-{{ section.settings.content_align }}">T-shirts sale</div>
-      <div class="text-xl font-bold content-align-{{ section.settings.content_align }}">
+      <div class="text-xl font-bold content-align-{{ section.settings.content_align }} pb-26">
         Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous.
       </div>
     </div>
-    <button class="w-32 bg-gray-600">SHOP</button>
+    <div class="px-14 py-4 text-white bg-black cursor-pointer">SHOP</div>
   </div>
-
-  <div class="flex justify-center items-center w-32 h-24 rounded-full bg-purple-300 font-black">-60%</div>
 
   <div class="header-image-second">
     <img src="{{ section.settings.image_2 | img_url: '400x'}}" alt="">
