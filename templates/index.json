@@ -6,7 +6,8 @@
         "image_1": "shopify:\/\/shop_images\/image_237_clear.png",
         "image_2": "shopify:\/\/shop_images\/image_246_clear.png",
         "content_position": "center",
-        "content_align": "center"
+        "content_align": "center",
+        "discount_rotate": 340
       }
     },
     "image_banner": {
