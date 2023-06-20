@@ -41,7 +41,20 @@
       }
     },
     "header-new": {
-      "type": "header-new"
+      "type": "header-new",
+      "blocks": {
+        "24d8c073-cfd5-4b5b-8f43-7f836fdac72f": {
+          "type": "header-new",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "24d8c073-cfd5-4b5b-8f43-7f836fdac72f"
+      ],
+      "settings": {
+        "logo_image": "shopify:\/\/shop_images\/logo.png"
+      }
     },
     "collections-bar": {
       "type": "collections-bar",
