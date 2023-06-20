@@ -1,30 +1,46 @@
-<div
-  class="flex justify-between bg-neutral-200"
-  style="background-color: {{ block.settings.bg_color }}"
->
-  <div class="header-image-first">
+<style>
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: {{ section.settings.content_position }};
+    border: 1px solid red;
+  }
+
+  .content-align-left {
+    align-items: start;
+    text-align: left;
+  }
+
+  .content-align-center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .content-align-right {
+    align-items: end;
+    text-align: right;
+  }
+</style>
+
+<div class="flex justify-between bg-neutral-200" style="background-color: {{ block.settings.bg_color }}">
+  <div class="header-image-second">
     <img src="{{ section.settings.image_1 | img_url: '400x'}}" alt="">
   </div>
 
-  <div
-    class="discount-badge w-48 h-48 rounded-full"
-    style="background-color: #D6ACFF"
-  >
-    -20%
+  <div class="flex justify-center items-center w-32 h-24 rounded-full bg-lime-200 font-black">-20%</div>
+
+  <div class="flex-container content-align-{{ section.settings.content_align }}">
+    <div>
+      <div class="text-6xl font-black content-align-{{ section.settings.content_align }}">T-shirts sale</div>
+      <div class="text-xl font-bold content-align-{{ section.settings.content_align }}">
+        Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous.
+      </div>
+    </div>
+    <button class="w-32 bg-gray-600">SHOP</button>
   </div>
-  <div class="flex-col justify-between bg-lime-500">
-    <h1 class="text-l {{ section.settings.text_align }}">T-shirts sale</h1>
-    <h4 class="text-sm {{ section.settings.text_align }}">
-      Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous.
-    </h4>
-    <button class="btn-shop bg-gray-600">SHOP</button>
-  </div>
-  <div
-    class="flex discount-badge w-48 h-48 rounded-full"
-    style="background-color: #D6ACFF"
-  >
-    -60%
-  </div>
+
+  <div class="flex justify-center items-center w-32 h-24 rounded-full bg-purple-300 font-black">-60%</div>
+
   <div class="header-image-second">
     <img src="{{ section.settings.image_2 | img_url: '400x'}}" alt="">
   </div>
@@ -44,6 +60,44 @@
       "type": "image_picker",
       "id": "image_2",
       "label": "Banner image second"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Content position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Position content top"
+        },
+        {
+          "value": "center",
+          "label": "Position content center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Position content bottom"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "content_align",
+      "label": "Content aligment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Align content left"
+        },
+        {
+          "value": "center",
+          "label": "Align content center"
+        },
+        {
+          "value": "right",
+          "label": "Align content right"
+        }
+      ]
     }
   ],
   "blocks": [
