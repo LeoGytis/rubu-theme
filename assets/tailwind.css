@@ -710,6 +710,9 @@ video {
 .pr-3 {
   padding-right: 0.75rem;
 }
+.pb-7 {
+  padding-bottom: 1.75rem;
+}
 .text-left {
   text-align: left;
 }
