@@ -1,18 +1,33 @@
-<div class="header-image">
+<div
+  class="flex justify-between bg-neutral-200"
+  style="background-color: {{ block.settings.bg_color }}"
+>
   <div class="header-image-first">
-    <img src="{{ section.settings.logo_image | img_url: '100x'}}" alt="">
-    PIRMA NUOTRAUKA
+    <img src="{{ section.settings.image_1 | img_url: '400x'}}" alt="">
   </div>
 
-  <div class="discount-badge">%NUOLAIDA%</div>
-
-  <h1 class="header-text">T-shirts sale</h1>
-  <h4 class="header-text-small">
-    Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous.
-  </h4>
-  <button class="btn-shop">SHOP</button>
-  <div class="discount-badge">%NUOLAIDA%</div>
-  <div class="header-image-second">ANTRA NUOTRAUKA</div>
+  <div
+    class="discount-badge w-48 h-48 rounded-full"
+    style="background-color: #D6ACFF"
+  >
+    -20%
+  </div>
+  <div class="flex-col justify-between bg-lime-500">
+    <h1 class="text-l {{ section.settings.text_align }}">T-shirts sale</h1>
+    <h4 class="text-sm {{ section.settings.text_align }}">
+      Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous.
+    </h4>
+    <button class="btn-shop bg-gray-600">SHOP</button>
+  </div>
+  <div
+    class="flex discount-badge w-48 h-48 rounded-full"
+    style="background-color: #D6ACFF"
+  >
+    -60%
+  </div>
+  <div class="header-image-second">
+    <img src="{{ section.settings.image_2 | img_url: '400x'}}" alt="">
+  </div>
 </div>
 
 {% schema %}
@@ -22,24 +37,31 @@
   "settings": [
     {
       "type": "image_picker",
-      "id": "logo_image_first",
-      "label": "Logo image first"
+      "id": "image_1",
+      "label": "Banner image first"
     },
     {
       "type": "image_picker",
-      "id": "logo_image_second",
-      "label": "Logo image second"
+      "id": "image_2",
+      "label": "Banner image second"
     }
   ],
   "blocks": [
     {
       "type": "header-banner",
-      "name": "Header banner"
+      "name": "Header banner",
+      "settings": [
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Banner background color"
+        }
+      ]
     }
   ],
   "presets": [
     {
-      "name": "Header new"
+      "name": "Header banner"
     }
   ]
 }
