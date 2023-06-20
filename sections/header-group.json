@@ -41,23 +41,7 @@
       }
     },
     "header-new": {
-      "type": "header-new",
-      "blocks": {
-        "a7e3a584-0829-4eee-bdc0-97e1dbdeee77": {
-          "type": "discount",
-          "settings": {
-            "text": "",
-            "bg_color": "",
-            "text_color": ""
-          }
-        }
-      },
-      "block_order": [
-        "a7e3a584-0829-4eee-bdc0-97e1dbdeee77"
-      ],
-      "settings": {
-        "logo_image": "shopify:\/\/shop_images\/logo.png"
-      }
+      "type": "header-new"
     },
     "collections-bar": {
       "type": "collections-bar",
