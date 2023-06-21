@@ -1,0 +1,47 @@
+<div
+  class="p-14"
+>
+  <div
+    class="text-3xl text-gray-400 uppercase text-center p-10"
+  >
+    TRENDING NOW HERE!
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Trending Now",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "select",
+      "id": "sort_a",
+      "label": "Sort collections",
+      "options": [
+        {
+          "value": "sortation",
+          "label": "Alphabetical"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "trending",
+      "name": "Trending Now",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "header_text",
+          "label": "Collections text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trending Now"
+    }
+  ]
+}
+{% endschema %}
