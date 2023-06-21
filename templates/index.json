@@ -15,10 +15,14 @@
       "settings": {
         "sort_a": "sortation"
       }
+    },
+    "trending": {
+      "type": "trending"
     }
   },
   "order": [
     "header-banner",
-    "coll-bar"
+    "coll-bar",
+    "trending"
   ]
 }
