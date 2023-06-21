@@ -1,15 +1,43 @@
+<style>
+  .circle-color {
+    fill: #55abce;
+    stroke: #0f1c3f;
+    stroke-width: 0.1875em;
+  }
+  .circle-color-pink {
+    fill: #c665e9;
+    stroke: #0f1c3f;
+    stroke-width: 0.1875em;
+  }
+  .circle-color-yellow {
+    fill: #ffdb5e;
+    stroke: #0f1c3f;
+    stroke-width: 0.1875em;
+  }
+</style>
+
 {% assign last_collection = collections.last %}
 
 <div class="p-14">
-  <div class="text-3xl text-gray-400 uppercase text-center p-10">
-    Populiariausios kategorijos {{ block.settings.header_text }}
-  </div>
+  <div class="text-6xl text-center font-bold p-10">Trending now</div>
   <div class="flex flex-wrap justify-evenly">
     {% for item in last_collection.products %}
       <div class="flex flex-col items-center">
         <img class="p-6" src="{{ item.featured_image.src | img_url: '267x354' }}" alt="{{ item.title }}">
         <div class="text-2xl font-semibold">{{ item.title }}</div>
-        <div class="text-2xl font-semibold">{{ item.price | money_with_currency }}</div>
+        <div class="text-2xl p-5">{{ item.price | money_with_currency }}</div>
+        <div class="flex ">
+          <div class="circle-color p-1">
+            {% render 'icon-circle-color' %}
+          </div>
+          <div class="circle-color-pink p-1">
+            {% render 'icon-circle-color' %}
+          </div>
+          <div class="circle-color-yellow p-1">
+            {% render 'icon-circle-color' %}
+          </div>
+          <div class="p-1">+2</div>
+        </div>
       </div>
     {% endfor %}
   </div>
