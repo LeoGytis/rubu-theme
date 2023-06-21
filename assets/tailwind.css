@@ -728,6 +728,15 @@ video {
 .pt-12 {
   padding-top: 3rem;
 }
+.pr-4 {
+  padding-right: 1rem;
+}
+.pl-4 {
+  padding-left: 1rem;
+}
+.pl-9 {
+  padding-left: 2.25rem;
+}
 .text-left {
   text-align: left;
 }
