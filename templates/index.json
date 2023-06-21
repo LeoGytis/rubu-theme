@@ -43,10 +43,17 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "coll-bar": {
+      "type": "coll-bar",
+      "settings": {
+      }
     }
   },
   "order": [
     "header-banner",
+    "coll-bar",
     "e10229d7-78d0-4aee-a189-af85447843f2"
+    
   ]
 }

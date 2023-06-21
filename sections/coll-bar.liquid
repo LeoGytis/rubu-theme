@@ -1,0 +1,62 @@
+<div
+  class="p-14"
+>
+  <div
+    class="text-3xl text-gray-400 uppercase text-center p-10"
+  >
+    Populiariausios kategorijos
+    {{ block.settings.header_text }}
+  </div>
+  <div class="flex flex-wrap justify-evenly">
+    {% for collection in collections %}
+      <div class="flex flex-col items-center">
+        <img
+          class="w-64 h-64 rounded-full p-6"
+          src="{{ collection.image | img_url: '300x'}}"
+          alt=""
+        >
+        <div class="text-2xl text font-medium">
+          {{ collection.title }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Coll Bar",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "select",
+      "id": "sort_a",
+      "label": "Sort collections",
+      "options": [
+        {
+          "value": "sortation",
+          "label": "Alphabetical"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "discount",
+      "name": "Collections Bar",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "header_text",
+          "label": "Collections text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coll Bar"
+    }
+  ]
+}
+{% endschema %}
