@@ -21,12 +21,16 @@
     },
     "services-bar": {
       "type": "services-bar"
+    },
+    "news-signup": {
+      "type": "news-signup"
     }
   },
   "order": [
     "header-banner",
     "coll-bar",
     "trending",
-    "services-bar"
+    "services-bar",
+    "news-signup"
   ]
 }
