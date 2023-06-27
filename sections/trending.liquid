@@ -18,30 +18,32 @@
 
 {% assign last_collection = collections.last %}
 
-<div class="p-14">
-  <div class="text-6xl text-center font-bold p-10">Trending now</div>
-  <div class="flex flex-wrap justify-evenly">
-    {% for item in last_collection.products %}
-      <div class="flex flex-col items-center">
-        <img class="p-6" src="{{ item.featured_image.src | img_url: '267x354' }}" alt="{{ item.title }}">
-        <div class="text-2xl font-semibold">{{ item.title }}</div>
-        <div class="text-2xl p-5">{{ item.price | money_with_currency }}</div>
-        <div class="flex">
-          <div class="circle-color p-1 flex-shrink">
-            {% render 'icon-circle-color' %}
-          </div>
-          <div class="circle-color-pink p-1 sm:flex-grow-3">
-            <div class="flex items-center justify-center">
+<div class="flex items-center justify-center">
+  <div class="flex flex-col max-w-screen-2xl w-full items-center justify-evenly p-3 py-8">
+    <div class="text-6xl text-center font-bold p-10">Trending now</div>
+    <div class="flex flex-wrap w-full justify-evenly">
+      {% for item in last_collection.products %}
+        <div class="flex flex-col items-center">
+          <img class="p-6" src="{{ item.featured_image.src | img_url: '267x354' }}" alt="{{ item.title }}">
+          <div class="text-2xl font-semibold">{{ item.title }}</div>
+          <div class="text-2xl p-5">{{ item.price | money_with_currency }}</div>
+          <div class="flex">
+            <div class="circle-color p-1 flex-shrink">
               {% render 'icon-circle-color' %}
             </div>
+            <div class="circle-color-pink p-1 sm:flex-grow-3">
+              <div class="flex items-center justify-center">
+                {% render 'icon-circle-color' %}
+              </div>
+            </div>
+            <div class="circle-color-yellow p-1 flex-shrink">
+              {% render 'icon-circle-color' %}
+            </div>
+            <div class="p-1 flex-shrink">+2</div>
           </div>
-          <div class="circle-color-yellow p-1 flex-shrink">
-            {% render 'icon-circle-color' %}
-          </div>
-          <div class="p-1 flex-shrink">+2</div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 
