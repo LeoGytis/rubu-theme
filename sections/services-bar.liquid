@@ -1,17 +1,17 @@
 <div
-  class="p-3 text-sm {{ section.settings.text_align }}"
+  class="flex justify-center p-3 text-sm {{ section.settings.text_align }}"
   style="background-color: #D6FD8B;"
 >
-  <div class="flex flex-wrap justify-evenly p-10">
-    <div class="flex items-center p-1">
+  <div class="flex flex-col sm:flex-row flex-wrap max-w-screen-2xl w-full justify-evenly items-center p-10">
+    <div class="flex items-center p-4">
       {% render 'icon-box' %}
       <div class="text-3xl font-semibold uppercase pl-9">Free Shipping & Returns*</div>
     </div>
-    <div class="flex items-center p-1">
+    <div class="flex items-center p-4">
       {% render 'icon-time' %}
       <div class="text-3xl font-semibold uppercase pl-9">Longtime Warranty</div>
     </div>
-    <div class="flex items-center p-1">
+    <div class="flex items-center p-4">
       {% render 'icon-question' %}
       <div class="text-3xl font-semibold uppercase pl-9">Top Customer Service</div>
     </div>
